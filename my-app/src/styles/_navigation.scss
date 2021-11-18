@@ -1,0 +1,39 @@
+
+
+.aside-menu{
+    // flex: 0 0 25%;
+    // max-width: 25%;
+    width: 20%;
+    background: #fff;
+    height: 100vh;
+    position: fixed;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.79); 
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.79);
+    
+    .logo{
+        display: block;
+        padding: 20px 0;
+        margin: auto;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+    }
+
+    .nav{
+        text-align: center;
+
+        .nav-item{
+            padding: 25px 0;
+            cursor: pointer;
+            font-size: 14px;
+
+            &:hover{
+                background: rgb(243, 243, 243);
+                transition: all ease-in-out 0.2s;
+            }
+        }
+    }
+
+    
+}
+

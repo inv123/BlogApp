@@ -1,10 +1,11 @@
 import './styles/style.scss'
 import './App.css';
+import { Homepage } from './Homepage';
 
 function App() {
   return (
     <div className="App">
-      hi
+      <Homepage />
      
     </div>
   );
