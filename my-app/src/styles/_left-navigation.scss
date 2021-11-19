@@ -3,10 +3,9 @@
 .aside-menu{
     // flex: 0 0 25%;
     // max-width: 25%;
-    width: 18%;
+    flex: 0 0 18%;
     background: #fff;
     height: 100vh;
-    position: fixed;
     -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.79); 
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.79);
     
@@ -31,11 +30,6 @@
                 padding-right: 10px;
             }
 
-            &:hover{
-                background: rgb(243, 243, 243);
-                transition: all ease-in-out 0.2s;
-            }
-
         }
     }
 
@@ -48,5 +42,7 @@
 }
 
 .active-border{
-    border-left: 3px solid rgb(16, 108, 212)
+    border-left: 3px solid rgb(16, 108, 212);
+    background: rgb(243, 243, 243);
+                transition: all ease-in-out 0.2s;
 }

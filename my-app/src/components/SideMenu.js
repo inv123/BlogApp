@@ -10,7 +10,7 @@ export const SideMenu = () => {
     const [navActive, setNavActive] = useState(1);
     const [navHover, setNavHover] = useState(0);
 
-    console.log(navActive, navHover);
+  
 
     return (
         <aside className='aside-menu'>

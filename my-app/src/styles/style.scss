@@ -1,6 +1,7 @@
 @import './typography';
 @import './config';
-@import './navigation';
+@import './left-navigation';
+@import './right-top-navigation';
 @import './colors';
 
 body{
@@ -11,6 +12,8 @@ body{
 
 #root{
     width: 100%;
+    height: 100vh;
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -19,3 +22,6 @@ body{
     display: flex;
 }
 
+.right-block{
+    flex: 0 0 82%;
+}
