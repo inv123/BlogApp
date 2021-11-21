@@ -1,6 +1,6 @@
 import './styles/style.scss'
 import './App.css';
-import { Homepage } from './Homepage';
+import { Homepage } from './components/homepage/Homepage';
 
 function App() {
   return (

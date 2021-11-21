@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import logo from '../images/logo.svg'
+import logo from '../../images/logo.svg'
 import { RiPencilFill } from 'react-icons/ri';
 import { MdPostAdd } from 'react-icons/md';
 import { BsFillBookmarkFill } from 'react-icons/bs';
