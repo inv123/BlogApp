@@ -4,7 +4,7 @@
     width: 100%;
 
     .navbar{
-        padding: 3px;
+       padding: 0;
         border-bottom: 1px solid #ccc;
     }
 
@@ -40,10 +40,18 @@
         .nav-notification{
             position: relative;
             flex: 0 0 5%;
-            margin: auto;
+            // margin: auto;
             text-align: center;
             border-left: 1px solid #ccc;
             border-right: 1px solid #ccc;
+
+           
+
+            .notification{
+                padding-top: 20px;
+
+                
+            }
 
             .notification-count{
                 
@@ -68,6 +76,16 @@
 
         .nav-user{
             flex: 0 0 20%;
+            position: relative;
+            
+            .dropdown-menu{
+                padding: 0;
+                width: 110%;
+                
+                a{
+                    padding: 12px 20px !important;
+                }
+            }
 
             #navbarDropdownMenuLink{
                 display: flex;
@@ -86,7 +104,23 @@
                 border-radius: 50%;
                 margin-left: 10px;
             }
+
+            .dropdown-menu a{
+                padding: 10px;
+            }
+
+            .logout-btn:hover{
+                background: rgba(255, 0, 0, 0.068) !important;
+            }
         }
+    }
+
+    .dropdown-menu{
+        position: absolute;
+        top: 67px ;
+        border-radius: 0;
+        border-top: 0;
+        // display: block !important;
     }
 }
 
@@ -94,4 +128,62 @@
 
 .dropdown-toggle::after{
     display: none;
+}
+
+.drop-notification{
+    right: 0 !important;
+
+    .dropdown-item{
+        white-space: normal;
+    }
+
+    .not-box {
+        width: 400px;
+        height: auto;
+        display: flex;
+
+        .not-icon{
+            flex: 0 0 10%;
+            margin: auto;
+
+            svg{
+                background: #ccc;
+                border-radius: 50%;
+                padding: 3px;
+            }
+        }
+
+        .not-content{
+            flex: 0 0 80%;
+
+            span{
+                font-weight: bold;
+            }
+
+            h6{
+                margin-bottom: 10px;
+            }
+
+            p{
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+
+.green{
+    color: rgb(9, 224, 117);
+}
+
+.red{
+    color: rgb(255, 0, 0);
+}
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: block;
 }
