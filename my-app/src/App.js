@@ -1,13 +1,14 @@
 import './styles/style.scss'
 import './App.css';
 import { Homepage } from './components/homepage/Homepage';
+import { GlobalProvider } from './context/GlobalContext';
 
 function App() {
   return (
-    <div className="App">
+    <GlobalProvider>
       <Homepage />
      
-    </div>
+    </GlobalProvider>
   );
 }
 

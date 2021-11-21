@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalContext';
+
 import { BiTrendingUp } from 'react-icons/bi';
 
 
 export const Notifications = ({ submenu }) => {
+    const context = useContext(GlobalContext)
 
+    console.log(context);
 
     return (
         <>
