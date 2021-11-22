@@ -9,9 +9,7 @@ const initialState = {
             category: 'analitic',
             value: 28
         },
-        state: {
-            seen: true
-        },
+        seen: true,
         dateCreated: new Date()
     },
     {
@@ -20,9 +18,7 @@ const initialState = {
             category: 'analitic',
             positive: 44
         },
-        state: {
-            seen: false
-        },
+        seen: false,
         dateCreated: new Date()
     }]
   }
@@ -45,7 +41,10 @@ const initialState = {
   function seeNotification(id){
     dispatch({
         type: 'SEE_NOTIFICATION',
-        payload: id
+        payload: {
+            id,
+            seen: true
+        }
       });
   }
 

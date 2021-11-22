@@ -5,11 +5,11 @@ import { GlobalContext } from '../../context/GlobalContext';
 export const SingleNotification = ({ category, number, seen, id}) => {
     const {seeNotification} = useContext(GlobalContext);
 
-    console.log(seeNotification);
+   
 
     return (
         <>
-            <li className={`${!seen.seen && 'not-seen'}`} onClick={() => seeNotification({id})}>
+            <li className={seen ? '' : 'not-seen'} onClick={() => seeNotification(id)}>
                 <a className="dropdown-item" href="#">
                     <div className='not-box'>
                         <div className='not-icon'><BiTrendingUp /></div>
