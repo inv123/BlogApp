@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import avatar from '../../images/avatar.jpg';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { BsBellFill } from 'react-icons/bs';
@@ -11,11 +11,19 @@ import { GrTransaction } from 'react-icons/gr';
 import { AiOutlinePoweroff } from 'react-icons/ai';
 
 import { Notifications } from './Notifications';
+import { GlobalContext } from '../../context/GlobalContext';
 
 
 export const TopNav = () => {
     const [notificationState, setNotificationState] = useState(0);
     const [userClick, setUserClick] = useState(0);
+    const context = useContext(GlobalContext);
+    
+    const notSeenNotifications = context.notifications.filter(x => x.seen === false);
+    if(notSeenNotifications.length > 99){
+        notSeenNotifications = '99+'
+    }
+    
 
 
     //Put different padding on Count notification
@@ -36,9 +44,11 @@ export const TopNav = () => {
                                 <li className="nav-item  nav-notification" onClick={() => notificationState === 1 ? setNotificationState(0) : setNotificationState(1)}>
                                     <div className='notification'>
                                         <BsBellFill />
-                                        <div className='notification-count'>
-                                            <p>22</p>
-                                        </div>
+                                        
+                                        {notSeenNotifications.length > 0 && <div className='notification-count' >
+                                            <p>{notSeenNotifications.length}</p>
+                                        </div>}
+
                                     </div>
 
                                     <Notifications submenu={notificationState}/>

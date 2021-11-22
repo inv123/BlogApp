@@ -16,11 +16,20 @@ const initialState = {
         id: generateId(),
         notification: {
             category: 'analitic',
-            positive: 44
+            value: 44
         },
         seen: false,
         dateCreated: new Date()
-    }]
+    },
+    {
+      id: generateId(),
+      notification: {
+          category: 'analitic',
+          value: -28
+      },
+      seen: false,
+      dateCreated: new Date()
+  }]
   }
 
   //Function Generate Random ID
