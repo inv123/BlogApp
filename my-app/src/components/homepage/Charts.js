@@ -12,8 +12,6 @@ export const Charts = () => {
                 borderColor: "#4BC0C0",
                 data: [3, 2, 4, 2, 5],
                 fill: true,
-
-
             }
         ]
     };
@@ -40,20 +38,17 @@ export const Charts = () => {
                 grid: {
                     drawBorder: false,
                     color: '#00000000',
-                    
                 },
                 ticks: {
                     display: false
                 }
             },
-           
         },
         plugins: {
             legend: {
                 display: false
             }
         }
-
     }
 
 

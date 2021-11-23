@@ -8,7 +8,10 @@ export const Dashboard = () => {
             <div className='board-title'>
                 <h6>dashboard</h6>
                 <h3>Overview</h3>
-                <Charts />
+                <div className='flex-charts'>
+                    <Charts />
+
+                </div>
             </div>
         </>
     )
