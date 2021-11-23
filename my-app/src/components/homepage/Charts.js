@@ -3,34 +3,64 @@ import { Line } from "react-chartjs-2";
 
 export const Charts = () => {
     const data = {
-        labels: ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            
-        }]
-    }
+        labels: ['Jan', 'Feb', 'mar', 'apr', 'may'],
+        datasets: [
+            {
+                label: "Posts",
+                borderWidth: 1,
+                backgroundColor: "#DAF2F2",
+                borderColor: "#4BC0C0",
+                data: [3, 2, 4, 2, 5],
+                fill: true,
+
+
+            }
+        ]
+    };
 
     const options = {
-        scales: {
-
-            yAxes: [{
-                gridLines: {
-                  drawBorder: false,
-                },
-                beginAtZero: true
-              }]
-        },
         elements: {
             line: {
-                tension: 0.3 
-            },
+                tension: 0.4 // disables bezier curves
+            }
         },
+        scales: {
+            x: {
+                beginAtZero: true,
+                grid: {
+                    color: '#00000000',
+                    drawBorder: false,
+                },
+                ticks: {
+                    display: false
+                }
+            },
+            y: {
+                beginAtZero: true,
+                grid: {
+                    drawBorder: false,
+                    color: '#00000000',
+                    
+                },
+                ticks: {
+                    display: false
+                }
+            },
+           
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+
     }
+
+
 
     return (
         <>
-            <Line data={data} options={options}/>
+            <Line data={data} options={options} />
         </>
     )
 }
