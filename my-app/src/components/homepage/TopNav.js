@@ -29,7 +29,7 @@ export const TopNav = () => {
     //Put different padding on Count notification
     return (
         <>
-            <div className='right-block'>
+            
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <div className="container-fluid">
 
@@ -72,7 +72,7 @@ export const TopNav = () => {
                         </div>
                     </div>
                 </nav>
-            </div>
+            
         </>
     )
 }
