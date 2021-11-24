@@ -2,7 +2,7 @@ import React from 'react';
 import { Line } from "react-chartjs-2";
 import { RiArrowUpSFill } from 'react-icons/ri'
 
-export const Charts = () => {
+export const Charts = ({ text, numbers, chartData }) => {
     const data = {
         labels: ['Jan', 'Feb', 'mar', 'apr', 'may'],
         datasets: [
@@ -11,7 +11,7 @@ export const Charts = () => {
                 borderWidth: 1,
                 backgroundColor: "#DAF2F2",
                 borderColor: "#4BC0C0",
-                data: [3, 2, 4, 2, 5],
+                data: chartData,
                 fill: true,
             }
         ]
@@ -60,8 +60,8 @@ export const Charts = () => {
                 <div className='chart-wrapper'>
                     <Line data={data} options={options} />
                     <div className='chart-data'>
-                        <h6>POSTs</h6>
-                        <h3>2200</h3>
+                        <h6>{text}</h6>
+                        <h4>{numbers}</h4>
                         <div className='chart-percent'>
                             <RiArrowUpSFill className='green'/>
                             <p className='green'>4.2%</p>
