@@ -1,5 +1,6 @@
 import React from 'react';
 import { Line } from "react-chartjs-2";
+import { RiArrowUpSFill } from 'react-icons/ri'
 
 export const Charts = () => {
     const data = {
@@ -55,7 +56,19 @@ export const Charts = () => {
 
     return (
         <>
-            <Line data={data} options={options} />
+           <div className='chart'>
+                <div className='chart-wrapper'>
+                    <Line data={data} options={options} />
+                    <div className='chart-data'>
+                        <h6>POSTs</h6>
+                        <h3>2200</h3>
+                        <div className='chart-percent'>
+                            <RiArrowUpSFill className='green'/>
+                            <p className='green'>4.2%</p>
+                        </div>
+                    </div>
+                </div>
+           </div>
         </>
     )
 }

@@ -10,6 +10,9 @@ export const Dashboard = () => {
                 <h3>Overview</h3>
                 <div className='flex-charts'>
                     <Charts />
+                    <Charts />
+                    <Charts />
+                    <Charts />
 
                 </div>
             </div>

@@ -1,0 +1,54 @@
+
+
+.flex-charts{
+    display: flex;
+    justify-content: space-between;
+    
+
+    .chart{
+        
+        max-width: 255px;
+        height: auto;
+        border-radius: 20px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.5); 
+        box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.5);
+
+        .chart-wrapper{
+            position: relative;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            pointer-events: none;
+            
+
+            canvas{
+                transform: scale(1.2);
+            }
+
+            .chart-data{
+                position: absolute;
+                top: 20%;
+                left: 35%;
+                text-align: center;
+
+                .chart-percent{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    padding-left: 5px;
+
+                    svg{
+                        margin: 0 5px;
+                    }
+                    
+                }
+
+            }
+        }
+        
+    }
+}
