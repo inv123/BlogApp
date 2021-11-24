@@ -2,15 +2,24 @@ import React from 'react';
 import { Line } from "react-chartjs-2";
 import { RiArrowUpSFill } from 'react-icons/ri'
 
-export const Charts = ({ text, numbers, chartData }) => {
+export const Charts = ({ text, numbers, chartData, percentage }) => {
+    const backgroundColor = percentage < 0 ? '#FEF4F6' : '#DAF2F2';
+    const borderColor = percentage < 0 ? '#FD0100' : '#4BC0C0';
+    if(chartData.length < 12){
+            chartData.unshift(0);
+    }
+
+    
+    
+
     const data = {
         labels: ['Jan', 'Feb', 'mar', 'apr', 'may'],
         datasets: [
             {
                 label: "Posts",
                 borderWidth: 1,
-                backgroundColor: "#DAF2F2",
-                borderColor: "#4BC0C0",
+                backgroundColor: backgroundColor ,
+                borderColor: borderColor,
                 data: chartData,
                 fill: true,
             }
@@ -52,7 +61,7 @@ export const Charts = ({ text, numbers, chartData }) => {
         }
     }
 
-
+    
 
     return (
         <>
@@ -63,8 +72,8 @@ export const Charts = ({ text, numbers, chartData }) => {
                         <h6>{text}</h6>
                         <h4>{numbers}</h4>
                         <div className='chart-percent'>
-                            <RiArrowUpSFill className='green'/>
-                            <p className='green'>4.2%</p>
+                            <RiArrowUpSFill className={`${percentage < 0 ? 'red' : 'green'}`}/>
+                            <p className={`${percentage < 0 ? 'red' : 'green'}`}>{percentage}%</p>
                         </div>
                     </div>
                 </div>
