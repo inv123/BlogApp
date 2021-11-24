@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
-import { Charts } from './Charts';
+import { SmallCharts } from './SmallCharts';
+import { OverviewChart } from './OverviewChart';
 import { GlobalContext } from '../../context/GlobalContext';
 
 
@@ -42,19 +43,23 @@ export const Dashboard = () => {
             <div className='board-title'>
                 <h6>dashboard</h6>
                 <h3>Overview</h3>
-                <div className='flex-charts'>
-                    <Charts text='posts' numbers={totalNumbers(posts)} chartData={chartData(posts)} percentage={chartPercentage(posts)}/>
+                
+            </div>
+            <div className='flex-charts'>
+                    <SmallCharts text='posts' numbers={totalNumbers(posts)} chartData={chartData(posts)} percentage={chartPercentage(posts)}/>
 
-                    <Charts text='pages'numbers={totalNumbers(pages)} chartData={chartData(pages)} percentage={chartPercentage(pages)}/>
+                    <SmallCharts text='pages'numbers={totalNumbers(pages)} chartData={chartData(pages)} percentage={chartPercentage(pages)}/>
 
-                    <Charts text='comments'numbers={totalNumbers(comments)} chartData={chartData(comments)} percentage={chartPercentage(comments)}/>
+                    <SmallCharts text='comments'numbers={totalNumbers(comments)} chartData={chartData(comments)} percentage={chartPercentage(comments)}/>
 
-                    <Charts text='new customers'numbers={totalNumbers(newCustomers)}chartData={chartData(newCustomers)} percentage={chartPercentage(newCustomers)}/>
+                    <SmallCharts text='new customers'numbers={totalNumbers(newCustomers)}chartData={chartData(newCustomers)} percentage={chartPercentage(newCustomers)}/>
 
-                    <Charts text='new subscribers'numbers={totalNumbers(newSubscribers)} chartData={chartData(newSubscribers)} percentage={chartPercentage(newSubscribers)}/>
+                    <SmallCharts text='new subscribers'numbers={totalNumbers(newSubscribers)} chartData={chartData(newSubscribers)} percentage={chartPercentage(newSubscribers)}/>
 
                 </div>
-            </div>
+                <div className='overview-chart'>
+                    <OverviewChart />
+                </div>
         </>
     )
 }

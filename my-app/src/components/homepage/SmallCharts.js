@@ -2,15 +2,13 @@ import React from 'react';
 import { Line } from "react-chartjs-2";
 import { RiArrowUpSFill } from 'react-icons/ri'
 
-export const Charts = ({ text, numbers, chartData, percentage }) => {
+export const SmallCharts = ({ text, numbers, chartData, percentage }) => {
+
     const backgroundColor = percentage < 0 ? '#FEF4F6' : '#DAF2F2';
     const borderColor = percentage < 0 ? '#FD0100' : '#4BC0C0';
     if(chartData.length < 12){
             chartData.unshift(0);
     }
-
-    
-    
 
     const data = {
         labels: ['Jan', 'Feb', 'mar', 'apr', 'may'],
@@ -61,7 +59,6 @@ export const Charts = ({ text, numbers, chartData, percentage }) => {
         }
     }
 
-    
 
     return (
         <>
