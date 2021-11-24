@@ -24,9 +24,18 @@ export const OverviewChart = () => {
         ]
     };
 
+    const options = {
+        elements: {
+            line: {
+                tension: 0.2 // disables bezier curves
+            }
+        },
+        
+    }
+
     return (
         <>
-            <Line data={data}/>
+            <Line data={data} options={options}/>
         </>
     )
 }

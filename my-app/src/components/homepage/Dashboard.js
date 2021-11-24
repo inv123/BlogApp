@@ -3,6 +3,7 @@ import { SmallCharts } from './SmallCharts';
 import { OverviewChart } from './OverviewChart';
 import { GlobalContext } from '../../context/GlobalContext';
 
+//TO DO ... Update database: get views for every single day for overview chart
 
 export const Dashboard = () => {
     const {tablesData} = useContext(GlobalContext);
@@ -13,6 +14,9 @@ export const Dashboard = () => {
     const comments = tablesData.comments.year2020;
     const newCustomers = tablesData.newCustomers.year2020;
     const newSubscribers = tablesData.newSubscribers.year2020;
+
+   
+    
 
     //Calculate Total Count for each chart
     function totalNumbers(array){
@@ -38,6 +42,9 @@ export const Dashboard = () => {
         return ((Object.values(lastMonth[0])[0] - Object.values(secondLastMonth[0])[0]) / Object.values(lastMonth[0])[0]).toFixed(2);
     }
 
+
+    
+
     return (
         <>
             <div className='board-title'>
@@ -56,10 +63,10 @@ export const Dashboard = () => {
 
                     <SmallCharts text='new subscribers'numbers={totalNumbers(newSubscribers)} chartData={chartData(newSubscribers)} percentage={chartPercentage(newSubscribers)}/>
 
-                </div>
-                <div className='overview-chart'>
-                    <OverviewChart />
-                </div>
+            </div>
+            <div className='overview-chart'>
+                <OverviewChart />
+            </div>
         </>
     )
 }

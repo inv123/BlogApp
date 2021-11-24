@@ -35,9 +35,9 @@ const initialState = {
   tablesData: {
     posts: {
       year2020: [
-        {january: 2000},
-        {february: 1000},
-        {march: 1000}
+        {January: 2000},
+        {February: 1000},
+        {March: 1000}
       ]
     },
     pages: {
@@ -68,6 +68,13 @@ const initialState = {
         {march: 15}
       ]
     }
+  },
+  profileViewed: {
+    year2020: [
+      {january: 4222},
+      {february: 2253},
+      {march: 893}
+    ]
   }
 }
 
@@ -100,6 +107,7 @@ export const GlobalProvider = ({ children }) => {
   return (<GlobalContext.Provider value={{
     notifications: state.notifications,
     tablesData: state.tablesData,
+    profileViewed: state.profileViewed,
     seeNotification
   }}>
     {children}
