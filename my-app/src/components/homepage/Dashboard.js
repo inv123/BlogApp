@@ -65,7 +65,7 @@ export const Dashboard = () => {
 
             </div>
             <div className='overview-chart'>
-                <OverviewChart />
+                {/* <OverviewChart /> */}
             </div>
         </>
     )
